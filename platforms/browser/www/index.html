@@ -37,29 +37,31 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
 
     <script type="text/javascript" charset="utf-8">
-      function onBodyLoad() {
-        document.addEventListener("deviceready", onDeviceReady,
-          false);
-      }
-      function onDeviceReady() {
-        //Get the appInfo DOM element
-        var element = document.getElementById("appInfo");
-     }
-     function talk() {
-        var u = new SpeechSynthesisUtterance();
-        var x = document.getElementById("frm1");
-        var txt = "";
-        txt = x.elements[0].value
-        u.text = txt;
-        u.lang = 'en-US';
-        speechSynthesis.speak(u);      
-        document.getElementById("frm1").reset();
-      }
+        function onBodyLoad() {
+            document.addEventListener("deviceready", onDeviceReady,
+            false);
+        }
+        function onDeviceReady() {
+            //Get the appInfo DOM element
+            var element = document.getElementById("appInfo");
+        }
+        function talk() {
+            var u = new SpeechSynthesisUtterance();
+            var x = document.getElementById("frm1");
+            var txt = "";
+            txt = x.elements[0].value
+            u.text = txt;
+            u.lang = 'en-US';
+            speechSynthesis.speak(u);      
+            document.getElementById("frm1").reset();
+        }
     </script>
 
     <title>Hello World</title>
